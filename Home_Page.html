@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Event Posting Website</title>
+		<link rel="stylesheet" href="Home_Page.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Welcome to the Event Posting Website</h1>
+		</header>
+
+		<nav class="navbar">
+			<ul class="nav-links">
+				<li><a href="Home_Page.html">Home</a></li>
+				<li><a href="aboutpage.html">About</a></li>
+				<li><a href="helppage.html">Help</a></li>
+			</ul>
+		</nav>
+		
+		<!-- Registered Events Section -->
+		<div id="registered-events-section" class="registered-events">
+    		<h3>Registered Events</h3>
+    		<ul id="registered-events-list"></ul>
+		</div>
+
+
+		<div class="container">
+        <!-- Events will be loaded here by JavaScript -->
+		</div>
+
+		<!-- Modal structure (hidden by default) -->
+		<div id="event-modal" class="modal">
+    		<div class="modal-content">
+       			<span class="close">&times;</span>
+        		<h2 id="modal-title"></h2>
+        		<p id="modal-date"></p>
+        		<p id="modal-location"></p>
+				<p id="modal-type"></p> <!-- Placeholder for event type -->
+				<p id="modal-performers"></p> <!-- Placeholder for performers -->
+    		</div>
+		</div>
+
+		<!-- Registration Modal -->
+		<div id="register-modal" class="modal">
+    		<div class="modal-content">
+        		<span class="close">&times;</span>
+       			<h2>Register for Event</h2>
+        		<form id="registration-form">
+            		<label for="register-name">Name:</label>
+            		<input type="text" id="register-name" name="name" required>
+            		<label for="register-email">Email:</label>
+            		<input type="email" id="register-email" name="email" required>
+            		<button type="submit" class="btn">Submit</button>
+        		</form>
+    		</div>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="Home_Page.js"></script>
+	</body>
+</html>
